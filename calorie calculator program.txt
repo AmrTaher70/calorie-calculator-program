@@ -1,0 +1,57 @@
+
+
+print ('welcome in calorie calculator program')
+age = int(input("Please input your age "))
+Height = int(input("Please input your Lengh in cm "))
+weight = int(input("Please input your weight in kg "))
+gender = str(input("are you male or female?: "))
+Heightmeter = float(Height*0.01)
+Weightinpounts = float(weight* 2.205)
+Calorie = float ((10 * weight)+(6.25 * Height)-(5 * age))
+CalorieF = float ((10 * weight)+(6.25 * Height)-(5 * age)-161)
+Waterounces = float (Weightinpounts * 0.68 )
+Waterleters = float (Waterounces / 33.814)
+BMI = float ((weight / Heightmeter ** 2 ))
+bodyfat = float (1.20 * BMI) + (0.23 * age ) - ( 10.8) - (5.4)
+bodyfatF= float (1.20 * BMI) + (0.23 * age) - 5.4 
+AL =  float (weight * 2)
+ALF =  float (weight * 1.8)
+carb = float (Calorie/4)
+carbF = float (CalorieF/4)
+M =  "male" or "Male"
+F = "female" or "Female"
+if gender==M:
+#Calorie = float ((10 * weight)+(6.25 * Height)-(5 * age))
+        print("Your body's daily calories needs is :" , Calorie , "If you want to lose weight, you must create a calorie deficit of 200 to 500 calories")
+
+
+#Waterounces = float (Weightinpounts * 0.68 )
+#Waterleters = float (Waterounces / 33.814)
+        print("It is recommend that you drink:" , Waterleters , "Leters of water per day.")
+
+#bodymass = float ((weight / Heightmeter ** 2 ))
+        print("Your Body Mass is:" , BMI , "The normal range of bady mass  is from 18.5 to 25")
+
+#bodyfat = float (1.20 * bodymass) + (0.23 * age ) - ( 10.8) - (5.4) 
+        print("Your body fat percentage is : " , bodyfat , "%" " The normal range of bodyfat is from 11% to 22%" )
+
+#AL =  float (weight * 2)
+        print("Your body's daily grams proten needs is :" , AL , "gram" )
+
+#carb = float (Calorie/4)
+        print("Your body's daily carb needs is :" , carb , "gram")
+
+        print("The amount of vitamin C you need each day is 90 mg for men ")
+        print("The amount of vitamin A you need each day is 900 mc for men ")
+        print("The amount of vitamin D you need each day is 15 mc for men  ")
+elif gender==F:
+        
+        print("Your body's daily calories needs is :" , CalorieF , "If you want to lose weight, you must create a calorie deficit of 200 to 500 calories")
+        print("Your body fat percentage is : " , bodyfatF , "%" " The normal range of bodyfat for women is from 14% to 25%" )
+        print("Your Body Mass is:" , BMI , "The normal range of bady mass for women  is from 18.5 to 25")
+        print("It is recommend that you drink:" , Waterleters , "Leters of water per day.")
+        print("Your body's daily grams proten needs is :" , ALF , "gram" )
+        print("Your body's daily carb needs is :" , carbF , "gram")
+        print("The amount of vitamin C you need each day is 75 mg for women " )
+        print("The amount of vitamin A you need each day is700 for women" )
+        print("The amount of vitamin D you need each day is 15 mc for women " )
